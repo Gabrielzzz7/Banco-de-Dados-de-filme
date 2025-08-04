@@ -1,0 +1,7 @@
+*.o
+*.db
+*.log
+build/
+bin/
+coverage/
+.vscode/
