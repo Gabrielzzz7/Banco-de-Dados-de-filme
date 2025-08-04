@@ -1,0 +1,90 @@
+1
+O Senhor dos Aneis
+Peter Jackson
+19-12-2001
+Fantasia
+178
+1
+Titanic
+James Cameron
+19-12-1997
+Romance
+195
+1
+Velozes e Furiosos
+Rob Cohen
+22-06-2001
+
+
+2
+3
+2
+4
+3
+Velozes e Furiosos 2
+
+
+Ação/Suspense
+110
+2
+5
+1
+2
+1
+Avatar
+James Cameron
+18-12-2009
+Ficção
+154
+1
+Harry Potter e a Pedra Filosofal
+Chris Columbus
+14-11-2001
+Fantasia
+152
+3
+5
+4
+5
+Harry Potter e a Pedra Filosofal (Ultimate)
+
+
+Fantasia/Aventura
+0
+2
+1
+Coringa
+Todd Phillips
+04-10-2019
+
+122
+1
+Toy Story
+John Lasseter
+22-11-1995
+Animação
+81
+2
+5
+3
+2
+4
+4
+Avatar 2
+James Cameron
+16-12-2022
+Ficção Científica
+0
+3
+8
+5
+7
+2
+5
+2
+5
+4
+2
+6
+s
+completo
