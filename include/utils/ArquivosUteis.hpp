@@ -16,7 +16,7 @@ namespace ArquivosUteis {
 
     class GerenciadorDeEntradas {
     public:
-        static int lerInt(bool atualizar, bool opicional = false);
+        static int lerInt(bool opicional = true);
         static float lerFloat();
         static double lerDouble();
         static std::string lerString(bool atualizar = false, bool opicional = false);
