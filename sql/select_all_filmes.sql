@@ -1,0 +1,1 @@
+SELECT id, titulo, diretor, data_lancamento, genero, duracao_minutos FROM filmes;

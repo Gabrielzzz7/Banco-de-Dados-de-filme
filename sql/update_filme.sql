@@ -1,0 +1,1 @@
+UPDATE filmes SET titulo = ?, diretor = ?, data_lancamento = ?, genero = ?, duracao_minutos = ? WHERE id = ?;
