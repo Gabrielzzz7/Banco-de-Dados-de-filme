@@ -65,8 +65,7 @@ void Filme::setDuracaoMinutos(int duracaoMinutos) {
 
 std::string Filme::toString() const {
   std::ostringstream oss;
-  oss << "ID: " << _id << ", "
-    << "Título: " << _titulo << ", "
+  oss << "Título: " << _titulo << ", "
     << "Diretor: " << _diretor << ", "
     << "Data de Lançamento: " << _dataLancamento << ", "
     << "Gênero: " << _genero << ", "
