@@ -94,7 +94,7 @@ namespace ArquivosUteis {
         std::cout << "Nova entrada: ";
     }
 
-    int GerenciadorDeEntradas::lerInt(bool atualizar, bool opicional) {
+    int GerenciadorDeEntradas::lerInt(bool opicional) {
         int inteiro;
 
         bool leitura_com_sucesso = false;
@@ -105,7 +105,10 @@ namespace ArquivosUteis {
                 std::string input;
                 std::getline(std::cin, input);
 
-                if ((opicional && input.empty()) || (atualizar && input.empty())) break;
+                if (opicional && input.empty()) {
+                    leitura_com_sucesso = true;
+                    return 0; 
+                }
 
                 size_t pos;
                 inteiro = std::stoi(input, &pos);
@@ -190,16 +193,17 @@ namespace ArquivosUteis {
         return decimal;
     }
 
-    std::string GerenciadorDeEntradas::lerString(bool atualizar, bool opicional ) {
+    std::string GerenciadorDeEntradas::lerString(bool atualizar, bool opicional) {
         std::string texto;
 
         bool leitura_com_sucesso = false;
         while (!leitura_com_sucesso) {
-            if (opicional) break;
             try {
                 std::getline(std::cin, texto);
 
-                if (stringVazia(texto) && !atualizar)
+                if (opicional && stringVazia(texto)) break;
+
+                if ((stringVazia(texto) && !atualizar))
                     throw std::exception();
 
                 if (texto.size() == 1 && !std::isalpha(static_cast<unsigned char>(texto[0])))
