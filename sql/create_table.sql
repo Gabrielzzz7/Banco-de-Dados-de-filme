@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS filmes (
     diretor TEXT NOT NULL,
     data_lancamento DATE NOT NULL,
     genero TEXT,
-    duracao_minutos INT
+    duracao_minutos INT DEFAULT 0
 );
