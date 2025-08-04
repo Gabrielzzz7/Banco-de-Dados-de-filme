@@ -38,7 +38,7 @@ std::string GeradorRelatorioAtividade::gerarRelatorioCompleto() const {
     std::string relatorio = "--- Relatorio de Atividade (Completo) ---\n";
     for (const auto& atividade : atividades) {
         std::string resultado_str = atividade.resultado.empty() ? "Resultado: N/A" : "Resultado: " + atividade.resultado;
-        relatorio += "[" + atividade.hora + "] Operacao: " + atividade.operacao + " -> " + resultado_str + "\n";
+        relatorio += "[" + atividade.hora + "] Operacao: " + atividade.operacao + ":\n" + resultado_str + "\n";
     }
     return relatorio;
 }
