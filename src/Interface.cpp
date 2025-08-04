@@ -21,7 +21,7 @@ void Interface::cadastrarNovoFilme() {
   std::cout << "Genero: ";
   genero = ArquivosUteis::GerenciadorDeEntradas::lerString(false, true);
   std::cout << "Duracao (minutos): ";
-  duracaoMinutos = ArquivosUteis::GerenciadorDeEntradas::lerInt(false, true);
+  duracaoMinutos = ArquivosUteis::GerenciadorDeEntradas::lerInt(true);
 
   Filme novoFilme(titulo, diretor, dataLancamento, genero, duracaoMinutos);
 
@@ -55,7 +55,8 @@ void Interface::listarTodosOsFilmes() {
       for (const auto& filme : filmes) {
         filme.exibir();
       }
-      geradorRelatorio.registrarOperacao("Listar todos", filmes.size() + " filmes");
+      std::string lista = std::to_string(filmes.size()) + " filmes.";
+      geradorRelatorio.registrarOperacao("Listar todos", lista);
     }
   }
   catch (const ArquivosUteis::Erro_ao_ler_query&) {
@@ -133,7 +134,7 @@ void Interface::atualizarFilme() {
   novoDiretor = ArquivosUteis::GerenciadorDeEntradas::lerString(true);
   if (!novoDiretor.empty()) filmeAtual.setDiretor(novoDiretor);
 
-  std::cout << "Nova Data de Lancamento (DD-MM-AAAA, deixe em branco para nao alterar): ";
+  std::cout << "Nova Data de Lancamento (DD-MM-AAAA): ";
   novaDataLancamento = ArquivosUteis::GerenciadorDeEntradas::lerData(true);
   if (!novaDataLancamento.empty()) filmeAtual.setDataLancamento(novaDataLancamento);
 
@@ -141,7 +142,7 @@ void Interface::atualizarFilme() {
   novoGenero = ArquivosUteis::GerenciadorDeEntradas::lerString(true);
   if (!novoGenero.empty()) filmeAtual.setGenero(novoGenero);
 
-  std::cout << "Nova Duracao (minutos, digite 0 para nao alterar): ";
+  std::cout << "Nova Duracao (minutos): ";
   novaDuracao = ArquivosUteis::GerenciadorDeEntradas::lerInt();
   if (novaDuracao != 0) filmeAtual.setDuracaoMinutos(novaDuracao);
 
