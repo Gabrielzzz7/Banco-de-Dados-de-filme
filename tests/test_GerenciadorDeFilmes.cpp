@@ -154,3 +154,45 @@ TEST_CASE("8 - Teste deleção de Filme com ID inexistente") {
   apagarBancoDeTeste();
 }
 
+TEST_CASE("10 - Teste atualização com todos os campos vazios") {
+  sqlite3* db = abrirBancoDeTeste();
+  GerenciadorDeFilmes gerenciador;
+  Filme filme(1, "Matrix", "Wachowski", "31-03-1999", "Ficção", 136);
+  gerenciador.inserir(db, filme);
+
+  filme.setTitulo("");
+  filme.setDiretor("");
+  filme.setDataLancamento("");
+  filme.setGenero("");
+  filme.setDuracaoMinutos(0);
+
+  CHECK(gerenciador.atualizar(db, filme) == true);
+  Filme atualizado = gerenciador.buscarPorId(db, 1);
+  CHECK(atualizado.getTitulo() == "");
+  CHECK(atualizado.getDiretor() == "");
+  CHECK(atualizado.getDataLancamento() == "");
+  CHECK(atualizado.getGenero() == "");
+  CHECK(atualizado.getDuracaoMinutos() == 0);
+}
+
+TEST_CASE("11 - Teste atualização de todos os campos") {
+  sqlite3* db = abrirBancoDeTeste();
+  GerenciadorDeFilmes gerenciador;
+  Filme filme(1, "Matrix", "Wachowski", "31-03-1999", "Ficção", 136);
+  gerenciador.inserir(db, filme);
+
+  filme.setTitulo("Matrix Reloaded");
+  filme.setDiretor("Wachowski Brothers");
+  filme.setDataLancamento("10-05-2003");
+  filme.setGenero("Acao");
+  filme.setDuracaoMinutos(135);
+
+  CHECK(gerenciador.atualizar(db, filme) == true);
+  Filme atualizado = gerenciador.buscarPorId(db, 1);
+  CHECK(atualizado.getTitulo() == "Matrix Reloaded");
+  CHECK(atualizado.getDiretor() == "Wachowski Brothers");
+  CHECK(atualizado.getDataLancamento() == "10-05-2003");
+  CHECK(atualizado.getGenero() == "Acao");
+  CHECK(atualizado.getDuracaoMinutos() == 135);
+}
+

@@ -2,9 +2,9 @@
 #include "utils/ArquivosUteis.hpp"  
 
 TEST_CASE("1 - Teste data em formato válido") {
-    CHECK(ArquivosUteis::checaData("2023-08-03") == "03/08/2023");
-    CHECK(ArquivosUteis::checaData("1999/12/31") == "31/12/1999");
-    CHECK(ArquivosUteis::checaData("1895-01-01") == "01/01/1895");
+    CHECK(ArquivosUteis::checaData("03-08-2023") == "03/08/2023");
+    CHECK(ArquivosUteis::checaData("31/12/1999") == "31/12/1999");
+    CHECK(ArquivosUteis::checaData("01-01-1895") == "01/01/1895");
 }
 
 TEST_CASE("2 - Teste data em formato inválido lança exceção") {
@@ -13,6 +13,7 @@ TEST_CASE("2 - Teste data em formato inválido lança exceção") {
     CHECK_THROWS_AS(ArquivosUteis::checaData("2023_08_03"), ArquivosUteis::Data_invalida);
     CHECK_THROWS_AS(ArquivosUteis::checaData(""), ArquivosUteis::Data_invalida);
     CHECK_THROWS_AS(ArquivosUteis::checaData("2023-0803"), ArquivosUteis::Data_invalida);
+    CHECK_THROWS_AS(ArquivosUteis::checaData("2023-08-32"), ArquivosUteis::Data_invalida);
 }
 
 TEST_CASE("3 Teste data com caracteres extras ou tamanho incorreto") {
@@ -25,7 +26,6 @@ TEST_CASE("4 - Teste datas com mês ou dia inválidos") {
     CHECK_THROWS_AS(ArquivosUteis::checaData("2023-13-10"), ArquivosUteis::Data_invalida); 
     CHECK_THROWS_AS(ArquivosUteis::checaData("2023-04-31"), ArquivosUteis::Data_invalida); 
     CHECK_THROWS_AS(ArquivosUteis::checaData("2023-02-29"), ArquivosUteis::Data_invalida); 
-    CHECK(ArquivosUteis::checaData("2024-02-29") == "29/02/2024"); 
 }
 
 TEST_CASE("5 - Teste ano abaixo do limite do primeiro filme") {

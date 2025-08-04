@@ -218,3 +218,25 @@ TEST_CASE("14 - Teste de leitura de double com erro anterior com string com espa
 
     RestaurarSaidaPadrao(original_cout);
 }
+
+TEST_CASE("15 - Teste de leitura de string opicional") {
+    std::streambuf* original_cout = AlterarSaidaPadrao();
+    std::istringstream input("\n");
+    std::cin.rdbuf(input.rdbuf());
+
+    std::string result = ArquivosUteis::GerenciadorDeEntradas::lerString(false, true);
+
+    assert(result.empty());
+    RestaurarSaidaPadrao(original_cout);
+}
+
+TEST_CASE("15 - Teste de leitura atualização vazia") {
+    std::streambuf* original_cout = AlterarSaidaPadrao();
+    std::istringstream input("\n");
+    std::cin.rdbuf(input.rdbuf());
+
+    std::string result = ArquivosUteis::GerenciadorDeEntradas::lerString(true);
+
+    assert(result.empty());
+    RestaurarSaidaPadrao(original_cout);
+}
