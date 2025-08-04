@@ -1,2 +1,0 @@
---- Relatorio de Atividade (Completo) ---
-[2025-08-03 23:25:01] Operacao: Cadastrar novo filme -> Resultado: N/A

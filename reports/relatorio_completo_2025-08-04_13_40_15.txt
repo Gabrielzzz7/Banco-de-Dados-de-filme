@@ -1,0 +1,51 @@
+--- Relatorio de Atividade (Completo) ---
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: O Senhor dos Aneis, Diretor: Peter Jackson, Data de Lançamento: 19-12-2001, Gênero: Fantasia, Duração: 178 minutos
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Titanic, Diretor: James Cameron, Data de Lançamento: 19-12-1997, Gênero: Romance, Duração: 195 minutos
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Velozes e Furiosos, Diretor: Rob Cohen, Data de Lançamento: 22-06-2001, Gênero: , Duração: 0 minutos
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 3 filmes.
+[2025-08-04 13:40:15] Operacao: Buscar filme por ID:
+Resultado: Título: Titanic, Diretor: James Cameron, Data de Lançamento: 19-12-1997, Gênero: Romance, Duração: 195 minutos
+[2025-08-04 13:40:15] Operacao: Atualizar filme:
+Resultado: Título: Velozes e Furiosos 2, Diretor: Rob Cohen, Data de Lançamento: 22-06-2001, Gênero: Ação/Suspense, Duração: 110 minutos
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 3 filmes.
+[2025-08-04 13:40:15] Operacao: Deletar filme:
+Resultado: 1
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 2 filmes.
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Avatar, Diretor: James Cameron, Data de Lançamento: 18-12-2009, Gênero: Ficção, Duração: 154 minutos
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Harry Potter e a Pedra Filosofal, Diretor: Chris Columbus, Data de Lançamento: 14-11-2001, Gênero: Fantasia, Duração: 152 minutos
+[2025-08-04 13:40:15] Operacao: Buscar filme por ID:
+Resultado: Título: Harry Potter e a Pedra Filosofal, Diretor: Chris Columbus, Data de Lançamento: 14-11-2001, Gênero: Fantasia, Duração: 152 minutos
+[2025-08-04 13:40:15] Operacao: Atualizar filme:
+Resultado: Título: Harry Potter e a Pedra Filosofal (Ultimate), Diretor: Chris Columbus, Data de Lançamento: 14-11-2001, Gênero: Fantasia/Aventura, Duração: 152 minutos
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 4 filmes.
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Coringa, Diretor: Todd Phillips, Data de Lançamento: 04-10-2019, Gênero: , Duração: 122 minutos
+[2025-08-04 13:40:15] Operacao: Cadastrar novo filme:
+Resultado: Título: Toy Story, Diretor: John Lasseter, Data de Lançamento: 22-11-1995, Gênero: Animação, Duração: 81 minutos
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 6 filmes.
+[2025-08-04 13:40:15] Operacao: Deletar filme:
+Resultado: 3
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 5 filmes.
+[2025-08-04 13:40:15] Operacao: Atualizar filme:
+Resultado: Título: Avatar 2, Diretor: James Cameron, Data de Lançamento: 16-12-2022, Gênero: Ficção Científica, Duração: 154 minutos
+[2025-08-04 13:40:15] Operacao: Deletar filme:
+Resultado: 7
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 4 filmes.
+[2025-08-04 13:40:15] Operacao: Deletar filme:
+Resultado: 2
+[2025-08-04 13:40:15] Operacao: Deletar filme:
+Resultado: 4
+[2025-08-04 13:40:15] Operacao: Listar todos:
+Resultado: 2 filmes.
